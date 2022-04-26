@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    
+    
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #212a35;
+    overflow-x: hidden;
+    
+}
+
+.time-date {
+    display: block;
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.joke-meme {
+    display: flex;
+    align-content: stretch;
+    align-items: flex-start;
+}

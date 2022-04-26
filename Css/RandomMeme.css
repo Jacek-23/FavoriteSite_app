@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(11, 8, 44);
+}
+
+.container {
+    text-align: center;
+}
+
+#content-preload {
+   display: none;
+   /*height: 20vh;*/
+}
+
+#content {
+    height: 60vh;
+    margin-top: 20px;
+}
+
+#text {
+    font-size: 1.8rem;
+    font-weight: bold;
+}

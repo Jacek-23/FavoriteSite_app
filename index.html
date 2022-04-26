@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UlubionaStrona</title>
+    <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="./Css/Time.css">
+    <link rel="stylesheet" href="./Css/RandomJoke.css">
+    <link rel="stylesheet" href="./Css/RandomMeme.css">
+    <link rel="stylesheet" href="./Css/Cats.css">
+    <link rel="stylesheet" href="./Css/CurrencyTable.css">
+</head>
+<body>
+    <main class="time-date">
+        <!--Time and date-->
+        <div id="time">
+            <div class="circle" style="--clr:#e96021;">
+                <div class="dots hr_dot"></div>
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70" id="hh"></circle>
+                </svg>
+                <div id="hours">00</div>
+            </div>
+            <div class="circle" style="--clr:#04fc43;">
+                <div class="dots min_dot"></div>
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70" id="mm"></circle>
+                </svg>
+                <div id="minutes">00</div>
+            </div>
+            <div class="circle" style="--clr:#fee800;">
+                <div class="dots sec_dot"></div>
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70" id="ss"></circle>
+                </svg>
+                <div id="seconds">00</div>
+            </div>
+            <div class="ap">
+                <div id="date">00/00/0000</div>
+            </div>
+        </div>
+        <!--RandomJoke-->
+        <div class="joke-container">
+            <div class="joke-text">
+                <span id="joke"></span>
+            </div>
+            <div class="button-container">
+                <button id="next-joke">Koleiny żart</button>
+            </div>
+        </div>
+        <!--RandomMeme-->
+        <div class="container">
+            <img src="" id="content-preload">
+            <img src="" id="content">
+            <div id="text"></div>
+        </div>
+        <!--Cats-->
+        <div class="container">
+            <img src="" id="content-img">
+            <div id="fact"></div>
+        </div>
+        <!--CurrencyTable-->
+        <div class="body-table">
+            <div class="currency-table">
+            <h3>Tabela NBP nr: <span id="date"></span></h3>
+            <div id="data-table"></div>
+            </div>
+        </div>
+        
+
+    </main>
+    
+    <script src="app.js"></script>
+</body>
+</html>
