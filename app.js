@@ -98,11 +98,17 @@ const randomMeme = {
         console.log("app started!");
         this.getContent();
 
-        document.addEventListener("keyup", (e) => {
-            if(e.code == "Space") {
-                this.getContent();  
-            }
-        });
+        document.getElementById("next-meme");
+            addEventListener("click", (e) => {
+                console.log("click");
+                this.getContent();
+                        addEventListener("keyup", (e) => {
+                    if(e.code == "Space") {
+                        this.getContent();  
+                    }
+                });
+            },
+        )
     },
 
     getContent: async function() {
@@ -145,11 +151,24 @@ randomMeme.init();
 window.onload = function() {
     getContent();
 
-    document.addEventListener("keyup", function(e) {
+    document.getElementById("next-cat");
+            addEventListener("click", (e) => {
+                console.log("click");
+                this.getContent();
+
+                    addEventListener("keyup", (e) => {
+                    if(e.code == "Space") {
+                        this.getContent();  
+                    }
+                });
+            },
+        )
+
+    /*document.addEventListener("keyup", function(e) {
         if(e.code == "Space") {
             getContent()
         }
-    });
+    });*/
 }    
 
 async function getContent() {
@@ -178,49 +197,3 @@ function updateDOM(imgSrc, fact) {
     img.src = imgSrc;
     factDiv.innerHTML = fact;
 }
-
-//CurrencyTable
-startApp();
-
-    async function startApp() {
-        const apiUrl="http://api.nbp.pl/api/exchangerates/tables/a?format=json";
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-        //console.log(data);
-
-        processData(data[0]);
-    }
-
-    function processData(data) {
-        console.log(data);
-        
-        const code = data.effectiveDate;
-        const table = data.table // tabela A
-        const tableNun = data.no; 
-        const ratesArr = data.rates;
-
-        const dataTableDiv = document.getElementById("data-table");
-        document.getElementById("date").innerHTML = tableNun;
-
-        ratesArr.forEach(function (el) {
-            console.log(el);
-            const code = el.code; // USD
-            const currency = el.currency; //dolar amerykański
-            const price = el.mid; // 3.23
-
-            addRateContent(code, currency, price, dataTableDiv);
-        });
-    }
-
-    function addRateContent(code, currency, price, dataTableDiv) {
-        const el = document.createElement("div");
-        el.classList.add("rate");
-
-        el.innerHTML =`
-            <div> ${code} </div>
-            <div> ${currency} </div>
-            <div> ${price} zł </div>
-        `
-        dataTableDiv.append(el);
-
-    }

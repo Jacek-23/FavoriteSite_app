@@ -2,15 +2,18 @@
 .container {
     text-align: center;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 #content-img {
     height: 80vh;
+    margin-top: 20px
 }
 
 #fact {
     padding: 10px;
     font-size: 1.8rem;
     font-weight: bold;
+    margin-bottom: -10px;
     
 }
