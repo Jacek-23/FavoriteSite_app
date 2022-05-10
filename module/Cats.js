@@ -2,8 +2,8 @@
 window.onload = function() {
     getContent();
 
-    document.getElementById("next-cat");
-            addEventListener("click", (e) => {
+    this.buttom = document.getElementById("next-cat");
+            this.buttom.addEventListener("click", (e) => {
                 console.log("click");
                 this.getContent();
 

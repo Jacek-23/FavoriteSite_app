@@ -8,8 +8,8 @@ const randomMeme = {
         console.log("app started!");
         this.getContent();
 
-        document.getElementById("next-meme");
-            addEventListener("click", (e) => {
+        this.buttom = document.getElementById("next-meme");
+            this.buttom.addEventListener("click", (e) => {
                 console.log("click");
                 this.getContent();
                         addEventListener("keyup", (e) => {

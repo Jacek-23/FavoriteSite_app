@@ -25,9 +25,9 @@ const randomJokeGenerator = {
     },
 
     addListeners: function() {
-        document.getElementById("next-joke");
-            addEventListener("click", (e) => {
-                console.log("click");
+        this.buttom = document.getElementById("next-joke");
+            this.buttom.addEventListener("click", (e) => {
+                console.log(e);
                 this.getNextJoke();
                 
             },
